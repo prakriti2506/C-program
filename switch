@@ -1,0 +1,668 @@
+/* 26. ARTHIMETIC EXPRESSION */
+#include <stdio.h>
+
+int main() {
+    int num1,num2,choice,result;
+    printf("Enter your choice [1. ADD ,2.SUBTRACTION , 3.MULTIPLICATION ,4. DIVISION] :  ");
+    scanf ("%d",&choice);
+    printf("\nEnter the value of first number : ");
+    scanf ("%d",&num1);
+    printf("\nEnter the value of second number : ");
+    scanf ("%d",&num2);
+    switch(choice)
+    { case 1: result = num1 + num2 ;
+              printf(" ADDITION : %d ",result);
+              break;
+      case 2: result = num1 - num2;
+              printf (" SUBTRACTION : %d", result);
+              break;
+      case 3: result = num1 * num2 ;
+              printf(" MULTIPLICATION : %d ",result);
+              break; 
+      case 4: result = num1 / num2 ;
+              printf(" DIVISION : %d ",result);
+              break; 
+      default : printf (" INVALID INPUT ");
+    }
+    return 0;
+}
+
+
+/* 27. DAYS OF WEEEK */
+#include <stdio.h>
+int main() {
+    int num;
+    printf( " Enter the number of day to be displayed [ 1,2,3,4,5,6,7] : "  );
+    scanf("%d",&num);
+    switch (num)
+    { case 1:
+         printf (" MONDAY ");
+         break;
+      case 2:
+         printf(" TUESDAY ");
+         break;
+      case 3: 
+         printf (" WEDNESDAY ");
+         break;
+      case 4:
+         printf (" THRUSDAY ");
+         break;
+      case 5:
+         printf ("FRIDAY  ");
+         break;
+      case 6:
+         printf (" SATURDAY ");
+         break; 
+      case 7:
+         printf (" SUNDAY");
+         break;
+     default: 
+         printf (" INVALID VALUE ");
+    }
+    return 0;
+}
+
+
+/* 28. MONTHS OF YEAR */
+#include <stdio.h>
+int main() {
+    int num;
+    printf( " Enter the number of month to be displayed [ 1,2,3,4,5,6,7,8,9,10,11,12] : "  );
+    scanf("%d",&num);
+    switch (num)
+    { case 1:
+         printf (" JANUARY ");
+         break;
+      case 2:
+         printf(" FEBRURAY ");
+         break;
+      case 3: 
+         printf (" MARCH ");
+         break;
+      case 4:
+         printf (" APRIL ");
+         break;
+      case 5:
+         printf (" MAY ");
+         break;
+      case 6:
+         printf (" JUNE ");
+         break; 
+      case 7:
+         printf (" JULY");
+         break;
+      case 8: 
+         printf (" AUGUST ");
+         break;
+      case 9:
+         printf (" SEPTEMBER ");
+         break;
+      case 10:
+         printf (" OCTOBER");
+         break;
+      case 11:
+         printf ("NOVEMBER ");
+      case 12 :
+         printf (" DECEMBER ");
+         break;
+     default: 
+         printf (" INVALID VALUE ");
+    }
+    return 0;
+}
+
+
+
+/*29 NUMBER OF DAYS IN A MONTH */
+
+#include <stdio.h>
+int main() {
+    int month;
+
+    printf("Enter the month number (1-12): ");
+    scanf("%d", &month);
+
+    switch(month) {
+        case 1:
+        case 3:
+        case 5:
+        case 7:
+        case 8:
+        case 10:
+        case 12:
+            printf("31 days\n");
+            break;
+        case 4:
+        case 6:
+        case 9:
+        case 11:
+            printf("30 days\n");
+            break;
+        case 2:
+            printf("28 or 29 days\n");
+            break;
+        default:
+            printf("Invalid input\n");
+    }
+
+    return 0;
+}
+
+
+
+/* 30. VOWEL OR CONSONANT */             
+#include <stdio.h>
+int main()
+{
+    char ch; 
+    printf("Enter any alphabet: ");
+    scanf("%c", &ch);
+    switch(ch)
+    {
+        case 'a': 
+            printf("Vowel");
+            break;
+        case 'e': 
+            printf("Vowel");
+            break;
+        case 'i': 
+            printf("Vowel");
+            break;
+        case 'o': 
+            printf("Vowel");
+            break;
+        case 'u': 
+            printf("Vowel");
+            break;
+        case 'A': 
+            printf("Vowel");
+            break;
+        case 'E': 
+            printf("Vowel");
+            break;
+        case 'I': 
+            printf("Vowel");
+            break;
+        case 'O': 
+            printf("Vowel");
+            break;
+        case 'U': 
+            printf("Vowel");
+            break;
+        default: 
+            printf("Consonant");
+    }
+
+    return 0;
+}
+
+
+
+
+
+/* 31. CHECK WHETHER THE CHARACTER IS ALPHABET, DIGIT OR SYMBOL */
+#include <stdio.h>
+int main() {
+    char ch;
+    printf("Enter a character: ");
+    scanf(" %c", &ch);
+
+    switch(ch) {
+        case 'A': case 'B': case 'C': case 'D': case 'E': case 'F': case 'G':
+        case 'H': case 'I': case 'J': case 'K': case 'L': case 'M': case 'N':
+        case 'O': case 'P': case 'Q': case 'R': case 'S': case 'T': case 'U':
+        case 'V': case 'W': case 'X': case 'Y': case 'Z':
+        case 'a': case 'b': case 'c': case 'd': case 'e': case 'f': case 'g':
+        case 'h': case 'i': case 'j': case 'k': case 'l': case 'm': case 'n':
+        case 'o': case 'p': case 'q': case 'r': case 's': case 't': case 'u':
+        case 'v': case 'w': case 'x': case 'y': case 'z':
+            printf("The character '%c' is an alphabet.\n", ch);
+            break;
+        case '0': case '1': case '2': case '3': case '4': case '5':
+        case '6': case '7': case '8': case '9':
+            printf("The character '%c' is a digit.\n", ch);
+            break;
+        default:
+            printf("The character '%c' is a special symbol.\n", ch);
+    }
+
+    return 0;
+}
+
+
+
+/* 32. MENU -DRIVEN PROGRAM: Area of circle, rectangle,triangle */
+#include <stdio.h>
+int main() {
+    int choice;
+    printf(" Enter your choice to display area [1.Circle, 2.Rectangle , 3.Triangle ] :  ");
+    scanf ("%d", &choice);
+    switch (choice)
+    { case 1: float r, result, pi=3.14;
+              printf (" Enter radius : ");
+              scanf(" %f",&r);
+              result = pi*r*r;
+              printf("AREA OF CIRCLE = %f ",result);
+              break;
+     case 2: float a ,b;
+             printf("Enter the length of rectangle : ");
+             scanf ("%f", &a);
+             printf("Enter the breath of rectangle : ");
+             scanf ("%f", &b);
+             printf ("AREA OF RECTANGLE = %f", a*b);
+             break;
+     case 3: float ba ,h;
+             printf(" Enter the value of base of triangle : ");
+             scanf(" %f", &ba);
+             printf(" Enter the value of height of triangle : ");
+             scanf(" %f", &h);
+             printf ("AREA OF TRIANGLE : %f ", (0.5)*ba*h);
+             break;
+    default :   
+             printf (" INVALID INPUT ");
+             break;
+    }         
+    return 0;
+
+
+
+/* 33. MENU -DRIVEN PROGRAM: Volume  of cube, cuboid , sphere  */
+#include <stdio.h>
+int main() {
+    int choice;
+    printf(" Enter your choice to display area [1.sphere , 2.cuboid  , 3. cube  ] :  ");
+    scanf ("%d", &choice);
+    switch (choice)
+    { case 1: float r, result, pi=3.14;
+              printf (" Enter radius : ");
+              scanf(" %f",&r);
+              result = (4.0/3.0)* pi*r*r*r;
+              printf("VOLUME  OF SPHERE  = %f ",result);
+              break;
+     case 2: float a ,b,h;
+             printf("Enter the length of rectangle : ");
+             scanf ("%f", &a);
+             printf("Enter the breath of rectangle : ");
+             scanf ("%f", &b);
+             printf("Enter the Height rectangle : ");
+             scanf ("%f", &h);
+             printf (" VOLUME OF CUBOID= %f", a*b*h );
+             break;
+     case 3: float ba;
+             printf(" Enter the value of base of CUBE  : ");
+             scanf(" %f", &ba);
+             printf ("VOLUME OF CUBE : %f ", ba*ba*ba);
+             break;
+    default :   
+             printf (" INVALID INPUT ");
+             break;
+    }         
+    return 0;
+}
+
+
+/* 34. EVEN OR ODD */
+#include <stdio.h>
+
+int main() {
+    int num, a;
+    printf(" Enter a number to check : ");
+    scanf("%d", &num);
+    a= num%2;
+    switch (a)
+    { case 0 : printf( "%d is even number ",num );
+               break;
+      case 1 : printf( "%d is odd number ",num );
+               break;           
+      default:
+         printf ("INVALID VALUE ");
+    }
+ return 0;
+}
+
+
+
+/*35. MAX OE TWO NUMBERS */
+
+#include <stdio.h>
+int main() {
+    int num1, num2;
+    printf("Enter two integers: ");
+    scanf("%d %d", &num1, &num2);
+
+    if (num1 == num2) {
+        printf("Both numbers are equal.\n");
+    } else {
+        switch (num1 > num2) {
+            case 1:
+                printf("%d is maximum.\n", num1);
+                break;
+            case 0:
+                printf("%d is maximum.\n", num2);
+                break;
+        }
+    }
+
+    return 0;
+}
+
+
+/*36. MAX OE THREE NUMBERS */
+
+#include <stdio.h>
+int main() {
+    int num1, num2, num3;
+    printf("Enter three integers to find the maximum: \n");
+    scanf("%d%d%d", &num1, &num2, &num3);
+    switch (num1 > num2) 
+    {
+        case 1: 
+            switch (num1 > num3) 
+            {
+                case 1:
+                    printf("%d is the maximum.", num1);
+                    break;
+                case 0:
+                    printf("%d is the maximum.", num3);
+                    break;
+            }
+            break;
+        case 0:
+            switch (num2 > num3) 
+            {
+                case 1:
+                    printf("%d is the maximum.\n", num2);
+                    break;
+                case 0:
+                    printf("%d is the maximum.\n", num3);
+                    break;
+            }
+            break;
+    }
+
+    return 0;
+}
+
+
+/*37. GRADE */
+
+#include <stdio.h>
+int main() {
+    int marks;
+
+    printf("Enter the marks obtained (0-100): ");
+    scanf("%d", &marks);
+
+    if (marks < 0 || marks > 100) {
+        printf("Invalid marks! Please enter marks between 0 and 100.\n");
+    } else {
+        switch (marks / 10) {
+            case 10:  // for marks == 100
+            case 9:
+                printf("Grade: A\n");
+                break;
+            case 8:
+                printf("Grade: B\n");
+                break;
+            case 7:
+                printf("Grade: C\n");
+                break;
+            case 6:
+                printf("Grade: D\n");
+                break;
+            case 5:
+                printf("Grade: E\n");
+                break;
+            case 4:
+                printf("Grade: E--\n");
+                break;
+            default:
+                printf("Grade: F\n");
+                break;
+        }
+    }
+
+    return 0;
+}
+
+
+/*38. TABLE OF A NUMBER */
+
+#include <stdio.h>
+int main() {
+    int num, i=0;
+    printf("Enter an integer: ");
+    scanf("%d", &num);
+
+    printf("Multiplication Table of %d using switch:\n", num);
+
+    while (i <= 10) {
+        switch(i) {
+            case 0: printf("%d x 0 = %d\n", num, num*0);     break;
+            case 1: printf("%d x 1 = %d\n", num, num * 1);  break;
+            case 2: printf("%d x 2 = %d\n", num, num * 2);  break;
+            case 3: printf("%d x 3 = %d\n", num, num * 3);  break;
+            case 4: printf("%d x 4 = %d\n", num, num * 4);  break;
+            case 5: printf("%d x 5 = %d\n", num, num * 5);  break;
+            case 6: printf("%d x 6 = %d\n", num, num * 6);  break;
+            case 7: printf("%d x 7 = %d\n", num, num * 7);  break;
+            case 8: printf("%d x 8 = %d\n", num, num * 8);  break;
+            case 9: printf("%d x 9 = %d\n", num, num * 9);  break;
+            case 10: printf("%d x 10 = %d\n", num, num * 10); break;
+            default:
+                break;
+        }
+        i++;
+    }
+    return 0;
+}
+
+
+
+
+
+/* 39. ARTHIMETIC EXPRESSION +, - ,* ,/ ,% */
+#include <stdio.h>
+
+int main() {
+    int num1,num2,choice,result;
+    printf("Enter your choice [1. ADD ,2.SUBTRACTION , 3.MULTIPLICATION ,4. DIVISION , 5.MODULUS ] :  ");
+    scanf ("%d",&choice);
+    printf("\nEnter the value of first number : ");
+    scanf ("%d",&num1);
+    printf("\nEnter the value of second number : ");
+    scanf ("%d",&num2);
+    switch(choice)
+    { case 1: result = num1 + num2 ;
+              printf(" ADDITION : %d ",result);
+              break;
+      case 2: result = num1 - num2;
+              printf (" SUBTRACTION : %d", result);
+              break;
+      case 3: result = num1 * num2 ;
+              printf(" MULTIPLICATION : %d ",result);
+              break;
+      case 4: result = num1 / num2 ;
+              printf(" DIVISION : %d ",result);
+              break;
+      case 5: result =  num1 % num2 ;
+              printf(" DIVISION : %d ",result);
+              break;      
+      default :
+             printf (" INVALID INPUT ");
+             break;
+    }
+    return 0;
+}
+
+
+
+
+
+ /*40. CONVERSION OF TEMPERATURE */
+#include <stdio.h>
+int main() {
+    int choice;
+    float t, ct;
+
+    printf("Temperature Conversion Menu:\n");
+    printf("1. Celsius to Fahrenheit\n");
+    printf("2. Fahrenheit to Celsius\n");
+    scanf("%d", &choice);
+    switch (choice) 
+    {
+        case 1:
+            printf("Enter temperature in Celsius: ");
+            scanf("%f", &t);
+            ct = (t * 9 / 5) + 32;
+            printf("%.2f Celsius is equal to %.2f Fahrenheit.", t, ct);
+            break;
+        case 2:
+            printf("Enter temperature in Fahrenheit: ");
+            scanf("%f", &t);
+            ct = (t - 32) * 5 / 9;
+            printf("%.2f Fahrenheit is equal to %.2f Celsius.", t, ct);
+            break;
+        default:
+            printf("Invalid choice ");
+            break;
+    }
+
+    return 0;
+}
+
+
+/* 41. UNIT CONVERSION */
+#include <stdio.h>
+
+int main() 
+{
+    int choice;
+    float n, cn;
+        printf("Unit Conversion Menu:\n");
+        printf("1. Kilometers to Meters (km -> m)\n");
+        printf("2. Meters to Centimeters (m -> cm)\n");
+        scanf("%d", &choice);
+        switch (choice) 
+        {
+            case 1:
+                printf("Enter value in Kilometers: ");
+                scanf("%f", &n);
+                cn = n * 1000;
+                printf("%.2f km = %.2f m\n", n, cn);
+                break;
+            case 2:
+                printf("Enter value in Meters: ");
+                scanf("%f", &n);
+                cn = n * 100; 
+                printf("%.2f m = %.2f cm\n", n, cn);
+                break;
+                
+            default:
+                printf("Invalid choice ");
+        }
+
+    return 0;
+}
+
+
+/* 42. SIMPLE INTEREST AND COMPOUND INTEREST */SS
+#include <stdio.h>
+#include <math.h>
+int main () {
+    int choice;
+    float p,r,t ,si,ci,a,n;
+    printf ( "Enter the type of interest to perform : \n ");
+    printf (" 1. Simple interest : \n");
+    printf (" 2. Compound interest ;\n ");
+    scanf ("%d", &choice);
+    printf (" Enter the value of Principal [Initial money] : ") ;
+    scanf ("%2f", &p );
+    printf (" Enter the value of Time  [ in years ] : ") ;
+    scanf ("%2f", &t );
+    printf (" Enter the value of Rate [in percentage ] : ") ; 
+    scanf ("%2f", &r );
+    
+    switch ( choice )
+          { case 1: 
+              
+                if ((r> 100)||(r<1))
+                   {printf (" Invalid value of rate ");}
+                else {  
+                 si = p*r*t;
+                printf (" SIMPLE INTEREST : %2f ", si);}
+              break;    
+              
+            case 2 :
+               
+              printf  (" Enter the number of time interest is compounded per year  : ");
+              scanf ("%2f", &n );
+              if ((n >12)||(n<1))
+               {printf ("Invalid value of compounded interest  ");}
+               else 
+                  { a=p* pow((1+ r/n),n*t);
+                    ci = a - p ;
+                    printf (" COMPOUND INTEREST : %d ", ci);
+                  }
+               break; 
+            default :
+                printf (" INVALID INPUT ");
+                
+          }   
+    return 0 ;
+}
+    
+
+
+/* 43. TYPE OF TRIANGLE */
+
+#include <stdio.h>
+
+int main() {
+    int choice;
+    float side1, side2, side3;
+
+    do {
+        printf("\nTriangle Type Checker Menu:\n");
+        printf("1. Check Triangle Type\n");
+        printf("2. Exit\n");
+        printf("Enter your choice: ");
+        scanf("%d", &choice);
+
+        switch(choice) {
+            case 1:
+                printf("Enter three sides of the triangle: ");
+                scanf("%f %f %f", &side1, &side2, &side3);
+
+                // Check triangle validity
+                if (side1 <= 0 || side2 <= 0 || side3 <= 0) {
+                    printf("Invalid input! Sides must be positive numbers.\n");
+                }
+                else if ((side1 + side2 > side3) && (side2 + side3 > side1) && (side1 + side3 > side2)) {
+                    // Classify triangle by side equality using if-else
+                    if (side1 == side2 && side2 == side3) {
+                        printf("The triangle is Equilateral.\n");
+                    }
+                    else if (side1 == side2 || side2 == side3 || side1 == side3) {
+                        printf("The triangle is Isosceles.\n");
+                    }
+                    else {
+                        printf("The triangle is Scalene.\n");
+                    }
+                }
+                else {
+                    printf("The sides do not form a valid triangle.\n");
+                }
+                break;
+
+            case 2:
+                printf("Exiting program.\n");
+                break;
+
+            default:
+                printf("Invalid choice! Please enter 1 or 2.\n");
+        }
+    } while(choice != 2);
+
+    return 0;
+}
